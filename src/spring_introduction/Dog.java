@@ -1,7 +1,7 @@
 package spring_introduction;
 
 public class Dog implements Pet{
-    private String name;
+//    private String name;
 
     public Dog() {
         System.out.println("Dog bean is created");
@@ -12,11 +12,24 @@ public class Dog implements Pet{
         System.out.println("Bow-wow");
     }
 
-    public String getName() {
-        return name;
+    //эти методы мы сами никак не вызываем, их вызывает сам Spring
+    //модификатор доступа (access modifier) может быть любым
+    //чаще всего делают void, так как значение return мы нигде не используем
+    //название может быть любым, но чаще так и называют init и destroy
+    //не должны содержать параметров
+    public void init() {
+        System.out.println("Class Dog: init method");
+    }
+    //Если bean со scope - prototype то destroy метод не выполнится, его необходимо вызывать самостоятельно!!!
+    public void destroy() {
+        System.out.println("Class Dog: destroy method");
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+//    public String getName() {
+//        return name;
+//    }
+//
+//    public void setName(String name) {
+//        this.name = name;
+//    }
 }
