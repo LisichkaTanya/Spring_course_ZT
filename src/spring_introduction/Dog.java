@@ -1,5 +1,8 @@
 package spring_introduction;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Dog implements Pet{
 //    private String name;
 
@@ -17,10 +20,12 @@ public class Dog implements Pet{
     //чаще всего делают void, так как значение return мы нигде не используем
     //название может быть любым, но чаще так и называют init и destroy
     //не должны содержать параметров
+    //@PostConstruct
     public void init() {
         System.out.println("Class Dog: init method");
     }
     //Если bean со scope - prototype то destroy метод не выполнится, его необходимо вызывать самостоятельно!!!
+    //@PreDestroy
     public void destroy() {
         System.out.println("Class Dog: destroy method");
     }
