@@ -9,19 +9,19 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class LoggingAndSecurityAspect {
 
-    @Pointcut("execution(* aop.UniLibrary.*(..))")
-    private void allMethodsFromUniLibrary() {}
-
-    @Pointcut("execution(public void aop.UniLibrary.returnBook())")
-    private void returnBookFromUniLibrary() {}
-
-    @Pointcut("allMethodsFromUniLibrary() && !returnBookFromUniLibrary()")
-    private void allMethodsExceptReturnBookFromUniLibrary() {}
-
-    @Before("allMethodsExceptReturnBookFromUniLibrary()")
-    public void beforeAllMethodsExceptReturnBookFromUniLibraryAdvice() {
-        System.out.println("beforeAllMethodsExceptReturnBookFromUniLibraryAdvice: Log #10");
-    }
+//    @Pointcut("execution(* aop.UniLibrary.*(..))")
+//    private void allMethodsFromUniLibrary() {}
+//
+//    @Pointcut("execution(public void aop.UniLibrary.returnBook())")
+//    private void returnBookFromUniLibrary() {}
+//
+//    @Pointcut("allMethodsFromUniLibrary() && !returnBookFromUniLibrary()")
+//    private void allMethodsExceptReturnBookFromUniLibrary() {}
+//
+//    @Before("allMethodsExceptReturnBookFromUniLibrary()")
+//    public void beforeAllMethodsExceptReturnBookFromUniLibraryAdvice() {
+//        System.out.println("beforeAllMethodsExceptReturnBookFromUniLibraryAdvice: Log #10");
+//    }
 
 
 //    @Pointcut("execution(* get*())")
