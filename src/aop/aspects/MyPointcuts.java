@@ -7,6 +7,6 @@ public class MyPointcuts {
     @Pointcut("execution(* sget*())")
     protected void allGetMethods() {}
 
-    @Pointcut("execution(* padd*(..))")
+    @Pointcut("execution(* sadd*(..))")
     protected void allAddMethods() {}
 }
