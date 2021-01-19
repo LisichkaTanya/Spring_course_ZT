@@ -12,6 +12,14 @@ public class Book {
     @Value("1866")
     private int yearPublication;
 
+    public Book() {}
+
+    public Book(String name, String author, int yearPublication) {
+        this.name = name;
+        this.author = author;
+        this.yearPublication = yearPublication;
+    }
+
     public String getName() {
         return name;
     }

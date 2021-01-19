@@ -21,9 +21,10 @@ public class UniLibrary extends AbstractLibrary {
         printSplitter();
     }
 
-    public void returnBook() {
-        System.out.println("Мы возвращаем книгу в UniLibrary");
+    public Book returnBook(Book book) {
+        System.out.println("Мы возвращаем книгу в UniLibrary " + book.getName());
         printSplitter();
+        return book;
     }
 
     public void returnMagazine() {
