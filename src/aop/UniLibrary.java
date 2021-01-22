@@ -22,6 +22,7 @@ public class UniLibrary extends AbstractLibrary {
     }
 
     public Book returnBook(Book book) {
+        int i = 10/0;
         System.out.println("Мы возвращаем книгу в UniLibrary " + book.getName());
         printSplitter();
         return book;

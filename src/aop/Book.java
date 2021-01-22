@@ -6,11 +6,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class Book {
     @Value("Преступление и наказание")
-    private String name;
+    private String name = "Значение по умолчанию";
     @Value("Ф.М. Достоевский")
-    private String author;
+    private String author = "Значение по умолчанию";
     @Value("1866")
-    private int yearPublication;
+    private int yearPublication = 8888;
 
     public Book() {}
 
